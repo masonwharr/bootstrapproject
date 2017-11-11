@@ -20,20 +20,26 @@ $(document).ready(function(){
 		"tesla","ethika","rolls royce","yogurt","dragon ball z","dbz","oreos","culvers","in n out",
 		"avacados","turkey","ice cream sandwiches","ihop","mitchells steakhouse","mlg","snapple",
 		"lemonnade","skittle","splashberry","mr.bigglesworth","feta","garlic butter","garlic","friends","family",
-		"micro center","best buy","indeed","glassdoor","zip recruiter","newegg","whole foods","kroger",
+		"micro center","best buy","indeed","glassdoor","ziprecruiter","newegg","whole foods","kroger",
 		"bob evans","mod pizza","smashburger","jones soda","amazon","food","parties","road trips","chrome","cookies"]) >=0 )
 	{
 		$('#result').text('Yes.');
 
 	}
 	else{
+
 		$('#result').text('Hm....Not sure.');
 	}
 }
 	$('.questionName').on('keyup', function(e){
 		if (e.keyCode == 13){
 			questionList();
-			$('.questionName').val('');
+			$('#result').addClass('animated fadeIn');
+			setTimeout(function(){
+			$('#result').removeClass('animated fadeIn');
+		},800);
+
+					$('.questionName').val('');
 		}
 	});
 });
