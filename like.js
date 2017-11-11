@@ -33,6 +33,7 @@ $(document).ready(function(){
 	$('.questionName').on('keyup', function(e){
 		if (e.keyCode == 13){
 			questionList();
+			$('.questionName').val('');
 		}
 	});
 });
